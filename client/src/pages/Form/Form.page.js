@@ -45,6 +45,7 @@ function Form() {
       alert("Given credentials don't exist in the database, kindly sign up");
     } else {
       if (data.token) {
+        alert("Given credentials have been logged in successfully");
         localStorage.setItem("token", data.token);
         navigate("/users");
       } else {

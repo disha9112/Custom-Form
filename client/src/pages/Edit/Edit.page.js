@@ -75,7 +75,11 @@ function Edit() {
   }
 
   useEffect(() => {
-    userDetails(id);
+    if (!id) {
+      navigate("/");
+    } else {
+      userDetails(id);
+    }
   }, []);
 
   return (
