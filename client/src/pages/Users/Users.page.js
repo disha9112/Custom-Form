@@ -30,7 +30,7 @@ function Users() {
 
   async function deleteUser(id) {
     const response = await fetch(
-      `http://localhost:8000/users/deleteUser/${id}`,
+      `https://custom-form-live.herokuapp.com/users/deleteUser/${id}`,
       {
         method: "DELETE",
       }
