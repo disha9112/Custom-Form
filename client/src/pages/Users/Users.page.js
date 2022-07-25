@@ -9,12 +9,15 @@ function Users() {
   const [users, setUsers] = useState([]);
 
   async function fetchUsers() {
-    const response = await fetch("http://localhost:8000/users/getUsers", {
-      method: "GET",
-      headers: {
-        Authorization: localStorage.getItem("token"),
-      },
-    });
+    const response = await fetch(
+      "https://custom-form-live.herokuapp.com/users/getUsers",
+      {
+        method: "GET",
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
+      }
+    );
 
     const data = await response.json();
 

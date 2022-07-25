@@ -25,12 +25,15 @@ function Edit() {
   };
 
   async function userDetails(id) {
-    const response = await fetch(`http://localhost:8000/users/getUser/${id}`, {
-      method: "GET",
-      headers: {
-        Authorization: localStorage.getItem("token"),
-      },
-    });
+    const response = await fetch(
+      `https://custom-form-live.herokuapp.com/users/getUser/${id}`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
+      }
+    );
 
     const data = await response.json();
 

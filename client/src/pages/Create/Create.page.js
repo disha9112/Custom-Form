@@ -24,17 +24,20 @@ function Create() {
   async function signUpSubmit(event) {
     event.preventDefault();
 
-    const response = await fetch("http://localhost:8000/auth/signUp", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        status,
-      }),
-    });
+    const response = await fetch(
+      "https://custom-form-live.herokuapp.com/auth/signUp",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          status,
+        }),
+      }
+    );
 
     const data = await response.json();
 
