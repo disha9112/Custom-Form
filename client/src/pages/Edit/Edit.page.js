@@ -50,7 +50,7 @@ function Edit() {
     event.preventDefault();
 
     const response = await fetch(
-      `http://localhost:8000/users/updateUser/${id}`,
+      `https://custom-form-live.herokuapp.com/users/updateUser/${id}`,
       {
         method: "PUT",
         headers: {
